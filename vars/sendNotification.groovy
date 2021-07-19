@@ -8,7 +8,6 @@ def call(Map config) {
             developer      : gitAuthorName(),
             buildUrl       : env.BUILD_URL
     ]
-
     def render = renderTemplate(rawBody,binding)
     echo render
     def subjectLine = env.JOB_BASE_NAME + ' - ' + env.BUILD_NUMBER + ' - ' + currentBuild.currentResult
